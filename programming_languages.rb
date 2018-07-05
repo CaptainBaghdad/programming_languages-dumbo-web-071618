@@ -4,8 +4,9 @@ def reformat_languages(languages)
  new_hash = {}
 
   languages.each do |type, language_hash|
-     binding.pry
+    
     language_hash.each do |language_name, data|
+       binding.pry
       data.each do |data_name, value|
         if new_hash.key?(language_name) == false
           new_hash[language_name] = {data_name => value, :style => [type]}
